@@ -1,3 +1,161 @@
+/* Definir variables */
+:root {
+  --font-family: Georgia, "Times New Roman", Times, serif;
+  --background-color: lightgray;
+  --link-color: #007bff;
+  --link-hover-color: #333;
+  --max-image-height: 300px;
+  --image-auto-width: auto;
+  --image-margin: 0 auto;
+}
 
+/* Definir animación */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-/*# sourceMappingURL=style.css.map */
+/* Aquí utilizo CSS vía etiquetas */
+* {
+  font-family: var(--font-family);
+  animation: fade-in 1s ease-in;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+h1 {
+  text-decoration: underline;
+  text-align: center;
+  padding-top: 10px;
+  animation: fade-in 1s ease-in;
+}
+
+h2 {
+  text-decoration: underline;
+  font-style: italic;
+  animation: fade-in 1s ease-in;
+}
+
+h3 {
+  text-decoration: underline;
+  animation: fade-in 1s ease-in;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  font-weight: 900;
+  animation: fade-in 1s ease-in;
+}
+
+main,
+section {
+  background-color: var(--background-color);
+  padding: 20px;
+  animation: fade-in 1s ease-in;
+}
+
+.main,
+.section .container h2 {
+  font-weight: bold;
+  animation: fade-in 1s ease-in;
+}
+
+.main,
+.section .container p {
+  line-height: 1.5;
+  animation: fade-in 1s ease-in;
+}
+
+#imageCarousel {
+  animation: fade-in 1s ease-in;
+}
+
+footer {
+  text-align: center;
+  font-style: italic;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  animation: fade-in 1s ease-in;
+}
+
+/* Aquí comienzan las clases */
+.presentacion {
+  width: 100%;
+  height: auto;
+  animation: fade-in 1s ease-in;
+}
+
+.perritos,
+.perrotes {
+  width: 500px;
+  height: auto;
+  animation: fade-in 1s ease-in;
+}
+
+/* Aquí utilizé un ID */
+#logo {
+  width: 150px;
+  height: auto;
+  animation: fade-in 1s ease-in;
+}
+
+.custom-header {
+  display: flex;
+  align-items: center;
+  animation: fade-in 1s ease-in;
+}
+
+.encabezado {
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+  animation: fade-in 1s ease-in;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  animation: fade-in 1s ease-in;
+}
+
+nav ul li {
+  margin: 0 15px;
+  animation: fade-in 1s ease-in;
+}
+
+.carousel-inner .img-fluid {
+  max-height: var(--max-image-height);
+  width: var(--image-auto-width);
+  margin: var(--image-margin);
+  animation: fade-in 1s ease-in;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--link-hover-color);
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--link-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
